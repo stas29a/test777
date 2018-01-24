@@ -33,7 +33,7 @@ class DownloaderService
 
         $task = new Task();
         $task->setExternalUrl($url);
-
+        $task->setStatus(Task::STATUS_PENDING);
         $task->setCreatedAt(new \DateTime());
 
         $this->entityManager->persist($task);
